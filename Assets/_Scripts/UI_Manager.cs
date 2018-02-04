@@ -17,7 +17,7 @@ public class UI_Manager : MonoBehaviour {
     // Use this for initialization
     private void Start()
     {
-        //PauseMenuCanvas.gameObject.SetActive(false);
+        PauseMenuCanvas.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +25,7 @@ public class UI_Manager : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape) && inGame)
         {
+            Debug.Log("PAWWWWSSEED");
             if (Paused == true)
             {
                 Time.timeScale = 1.0f;
@@ -65,6 +66,7 @@ public class UI_Manager : MonoBehaviour {
     public void Main_Menu() 
     {
         inGame = false;
+        PauseMenuCanvas.gameObject.SetActive(false);
         MainMenuCanvas.gameObject.SetActive(true);
     }
 }

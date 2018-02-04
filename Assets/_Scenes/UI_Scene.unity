@@ -505,7 +505,7 @@ RectTransform:
   - {fileID: 801395818}
   - {fileID: 1422376088}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -523,7 +523,6 @@ GameObject:
   - component: {fileID: 801395821}
   - component: {fileID: 801395820}
   - component: {fileID: 801395819}
-  - component: {fileID: 801395822}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -589,7 +588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 801395822}
+      - m_Target: {fileID: 2054133299}
         m_MethodName: Start_Game
         m_Mode: 1
         m_Arguments:
@@ -635,19 +634,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 801395817}
---- !u!114 &801395822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801395817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03794319edfa3e04eb21e8631196ffa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuCanvas: {fileID: 734127517}
-  PauseMenuCanvas: {fileID: 1965116193}
 --- !u!1 &843184937
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +719,6 @@ GameObject:
   - component: {fileID: 1251200308}
   - component: {fileID: 1251200307}
   - component: {fileID: 1251200306}
-  - component: {fileID: 1251200305}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -760,19 +745,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1251200305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1251200303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03794319edfa3e04eb21e8631196ffa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuCanvas: {fileID: 734127517}
-  PauseMenuCanvas: {fileID: 1965116193}
 --- !u!114 &1251200306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1251200305}
+      - m_Target: {fileID: 2054133299}
         m_MethodName: Resume_Game
         m_Mode: 1
         m_Arguments:
@@ -869,7 +841,6 @@ GameObject:
   - component: {fileID: 1284741961}
   - component: {fileID: 1284741960}
   - component: {fileID: 1284741959}
-  - component: {fileID: 1284741958}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -896,19 +867,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -81}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1284741958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1284741956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03794319edfa3e04eb21e8631196ffa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuCanvas: {fileID: 734127517}
-  PauseMenuCanvas: {fileID: 1965116193}
 --- !u!114 &1284741959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,7 +906,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1284741958}
+      - m_Target: {fileID: 2054133299}
         m_MethodName: Quit_Game
         m_Mode: 1
         m_Arguments:
@@ -1005,7 +963,6 @@ GameObject:
   - component: {fileID: 1344710583}
   - component: {fileID: 1344710582}
   - component: {fileID: 1344710581}
-  - component: {fileID: 1344710580}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1032,19 +989,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1344710580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1344710578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03794319edfa3e04eb21e8631196ffa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuCanvas: {fileID: 734127517}
-  PauseMenuCanvas: {fileID: 1965116193}
 --- !u!114 &1344710581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,7 +1028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1344710580}
+      - m_Target: {fileID: 2054133299}
         m_MethodName: Main_Menu
         m_Mode: 1
         m_Arguments:
@@ -1190,7 +1134,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421579651
 GameObject:
@@ -1277,7 +1221,6 @@ GameObject:
   - component: {fileID: 1422376091}
   - component: {fileID: 1422376090}
   - component: {fileID: 1422376089}
-  - component: {fileID: 1422376092}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1343,7 +1286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1422376092}
+      - m_Target: {fileID: 2054133299}
         m_MethodName: Quit_Game
         m_Mode: 1
         m_Arguments:
@@ -1389,19 +1332,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422376087}
---- !u!114 &1422376092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1422376087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03794319edfa3e04eb21e8631196ffa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenuCanvas: {fileID: 734127517}
-  PauseMenuCanvas: {fileID: 1965116193}
 --- !u!1 &1641492451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,7 +1423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1965116194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,7 +1496,7 @@ RectTransform:
   - {fileID: 1344710579}
   - {fileID: 1284741957}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1689,5 +1619,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
