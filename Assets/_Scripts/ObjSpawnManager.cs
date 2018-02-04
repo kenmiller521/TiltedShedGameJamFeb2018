@@ -13,8 +13,8 @@ public class ObjSpawnManager : MonoBehaviour {
     private int randsprite;
 	void Awake () {
         spriteR = spawnedObj.GetComponent<SpriteRenderer>();
-        goodbad = (int)(Random.Range(1.0f, 2.9f));
-        randsprite = (int)(Random.Range(1.0f, 6.9f));
+        goodbad = (int)(Random.Range(1.0f, 3.9f));
+        randsprite = (int)(Random.Range(1.0f, 3.9f));
 	}
 	
 	void FixedUpdate () {
@@ -24,7 +24,7 @@ public class ObjSpawnManager : MonoBehaviour {
 	}
     void DetermineObject()
     {
-        if (goodbad == 1)
+        if (goodbad <= 2)
         {
             switch (randsprite)
             {
