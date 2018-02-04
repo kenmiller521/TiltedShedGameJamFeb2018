@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     public SpriteRenderer currentSymbol;
     //sprites that will be randomly chosen and set to currentSymbol to show which button to press
     public Sprite[] symbols;
+    public GameManager gameManager;
 
     //enum and instance of it to choose target input
     private enum TargetInput { Left, Middle, Right};
@@ -44,7 +45,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.Z))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(0);
+                        gameManager.AddPoints(0);
+                        currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
 
@@ -59,7 +61,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.B))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(1);
+                        gameManager.AddPoints(1);
+                        currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
 
@@ -77,7 +80,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.X))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(0);
+                        gameManager.AddPoints(0);
+                        currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
 
@@ -92,7 +96,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.N))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(1);
+                        gameManager.AddPoints(1);
+                        currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
 
@@ -110,7 +115,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.C))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(0);
+                        gameManager.AddPoints(0);
+                        currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
 
@@ -125,7 +131,8 @@ public class InputManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.M))
                     {
                         inputActive = false;
-                        //GameController.AddPoint(1);
+                        gameManager.AddPoints(1);
+                        currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
 

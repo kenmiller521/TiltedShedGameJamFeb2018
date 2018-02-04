@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjSpawnManager : MonoBehaviour {
+public class ObjSpawnManager : MonoBehaviour
+{
 
     public Sprite[] goodItems;
     public Sprite[] badItems;
