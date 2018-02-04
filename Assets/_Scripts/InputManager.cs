@@ -28,7 +28,6 @@ public class InputManager : MonoBehaviour
         _rightPlayerInputActive = false;
 
         inputActive = false;
-        ActivateTarget();
     }
 
     // Update is called once per frame
