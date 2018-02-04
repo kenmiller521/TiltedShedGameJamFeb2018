@@ -8,20 +8,17 @@ public class ObjSpawnManager : MonoBehaviour {
     public Sprite[] badItems;
     public GameObject spawnedObj;
     private SpriteRenderer spriteR;
-
+    private Animator anim;
     private int goodbad;
     private int randsprite;
+
 	void Awake () {
         spriteR = spawnedObj.GetComponent<SpriteRenderer>();
+        anim = spawnedObj.GetComponent<Animator>();
         goodbad = (int)(Random.Range(1.0f, 3.9f));
         randsprite = (int)(Random.Range(1.0f, 3.9f));
 	}
-	
-	void FixedUpdate () {
-        goodbad = (int)(Random.Range(1.0f, 2.9f));
-        randsprite =(int)(Random.Range(1.0f, 3.9f));
-        DetermineObject();
-	}
+
     void DetermineObject()
     {
         if (goodbad <= 2)
@@ -56,6 +53,8 @@ public class ObjSpawnManager : MonoBehaviour {
     }
     IEnumerator SpawnDelay()
     {
+        goodbad = (int)(Random.Range(1.0f, 2.9f));
+        randsprite = (int)(Random.Range(1.0f, 3.9f));
         yield return new WaitForSeconds(1f);
     }
 }
