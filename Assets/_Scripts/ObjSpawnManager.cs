@@ -15,8 +15,8 @@ public class ObjSpawnManager : MonoBehaviour {
 	void Awake () {
         spriteR = spawnedObj.GetComponent<SpriteRenderer>();
         anim = spawnedObj.GetComponent<Animator>();
-        goodbad = (int)(Random.Range(1.0f, 3.9f));
-        randsprite = (int)(Random.Range(1.0f, 3.9f));
+        goodbad = Random.Range(1, 3);
+        randsprite = Random.Range(1, 3);
         anim.SetBool(0, true);
 	}
 
@@ -54,8 +54,8 @@ public class ObjSpawnManager : MonoBehaviour {
     }
     IEnumerator SpawnDelay()
     {
-        goodbad = (int)(Random.Range(1.0f, 2.9f));
-        randsprite = (int)(Random.Range(1.0f, 3.9f));
+        goodbad = Random.Range(1, 3);
+        randsprite = Random.Range(1, 3);
         yield return new WaitForSeconds(1f);
     }
 }
