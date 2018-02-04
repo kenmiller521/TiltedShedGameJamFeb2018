@@ -17,9 +17,10 @@ public class ObjSpawnManager : MonoBehaviour {
         anim = spawnedObj.GetComponent<Animator>();
         goodbad = (int)(Random.Range(1.0f, 3.9f));
         randsprite = (int)(Random.Range(1.0f, 3.9f));
+        anim.SetBool(0, true);
 	}
 
-    void DetermineObject()
+    public void DetermineObject()
     {
         if (goodbad <= 2)
         {
