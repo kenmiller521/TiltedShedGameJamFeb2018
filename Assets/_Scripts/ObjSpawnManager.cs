@@ -19,7 +19,7 @@ public class ObjSpawnManager : MonoBehaviour {
 	
 	void FixedUpdate () {
         goodbad = (int)(Random.Range(1.0f, 2.9f));
-        randsprite =(int)(Random.Range(1.0f, 6.9f));
+        randsprite =(int)(Random.Range(1.0f, 3.9f));
         DetermineObject();
 	}
     void DetermineObject()
