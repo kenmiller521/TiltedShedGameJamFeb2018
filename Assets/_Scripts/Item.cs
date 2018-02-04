@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-
-    [SerializeField]
-    int points;
+    [SerializeField] int points;
 
     public int Points
     {
