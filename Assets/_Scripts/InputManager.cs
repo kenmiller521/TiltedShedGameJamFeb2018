@@ -20,7 +20,6 @@ public class InputManager : MonoBehaviour
     private bool _leftPlayerInputActive;
     private bool _rightPlayerInputActive;
   
-
 	// Use this for initialization
 	void Start ()
     {
@@ -172,5 +171,14 @@ public class InputManager : MonoBehaviour
         _rightPlayerInputActive = true;
         inputActive = true;
     }
-    
+
+    public void DeactivateInput()
+    {
+        inputActive = false;
+    }
+
+    public void ActivateInput()
+    {
+        inputActive = true;
+    }
 }
