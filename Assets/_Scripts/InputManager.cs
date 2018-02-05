@@ -187,7 +187,17 @@ public class InputManager : MonoBehaviour
         EnableRightPlayerButtons();
         inputActive = true;
     }
-    
+
+    public void DeactivateInput()
+    {
+        inputActive = false;
+    }
+
+    public void ActivateInput()
+    {
+        inputActive = true;
+    }
+
     private void DisableLeftPlayerButtons() {
         buttonController.zButton.color = Color.gray;
         buttonController.xButton.color = Color.gray;
