@@ -17,14 +17,14 @@ public class ObjSpawnManager : MonoBehaviour
 	void Awake () {
         spriteR = spawnedObj.GetComponent<SpriteRenderer>();
         anim = spawnedObj.GetComponent<Animator>();
-        goodbad = Random.Range(0, 4);
+        goodbad = Random.Range(0, 5);
         randsprite = Random.Range(0, 3);
         anim.SetBool(0, true);
 	}
 
     public void DetermineObject()
     {
-        if (goodbad <= 1)
+        if (goodbad <= 2)
         {
             droppedGoodItem = true;
             switch (randsprite)
@@ -61,7 +61,7 @@ public class ObjSpawnManager : MonoBehaviour
 
     IEnumerator SpawnDelay()
     {
-        goodbad = Random.Range(0, 4);
+        goodbad = Random.Range(0, 5);
         randsprite = Random.Range(0, 3);
         yield return new WaitForSeconds(1f);
     }
