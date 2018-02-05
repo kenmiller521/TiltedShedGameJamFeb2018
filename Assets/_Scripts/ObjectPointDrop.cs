@@ -9,7 +9,8 @@ public class ObjectPointDrop : MonoBehaviour {
 
     public Transform left;
     public Transform right;
-
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
     private SpriteRenderer spriteR;
 	// Use this for initialization
 	void Awake () {
@@ -23,11 +24,13 @@ public class ObjectPointDrop : MonoBehaviour {
         {
             newItem = Instantiate(newPrefab, left.position, newPrefab.transform.rotation);
             newItem.GetComponent<SpriteRenderer>().sprite = spriteR.sprite;
+            audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
         }
         else
         {
             newItem = Instantiate(newPrefab, right.position, newPrefab.transform.rotation);
             newItem.GetComponent<SpriteRenderer>().sprite = spriteR.sprite;
+            audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
         }
 
         newItem.AddComponent<PolygonCollider2D>();

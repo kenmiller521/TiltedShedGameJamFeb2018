@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     public GameManager gameManager;
     public GameObject inGameUI;
     public ObjectPointDrop opj;
+    public AudioSource audioSource;
     //enum and instance of it to choose target input
     private enum TargetInput { Left, Middle, Right};
     private TargetInput _targetInput;
@@ -177,6 +178,7 @@ public class InputManager : MonoBehaviour
     //randomly assign a symbol sprite to the targetInput object
     public void ActivateTarget()
     {
+        audioSource.Play();
         int randomIndex = Random.Range(0, symbols.Length);
         currentSymbol.sprite = symbols[randomIndex];
 

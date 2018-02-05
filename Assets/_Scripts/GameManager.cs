@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public Text leftPlayerScoreText;
     public Text rightPlayerScoreText;
 
+    public Animator player1Anim;
+    public Animator player2Anim;
+    public AudioSource meowAudioSource,hissAudioSource;
 
     private int _leftPlayerScore;
     private int _rightPlayerScore;
@@ -49,10 +52,18 @@ public class GameManager : MonoBehaviour
         if (playerNum == 0)
         {
             if(ObjSpawnManager.droppedGoodItem)
+            {
                 _leftPlayerScore++;
+                meowAudioSource.Play();
+                player1Anim.SetTrigger("IsSuccess");
+            }
 
             else
+            {
                 _leftPlayerScore--;
+                hissAudioSource.Play();
+            }
+               
 
             leftPlayerScoreText.text = "" + _leftPlayerScore;
 
@@ -70,10 +81,18 @@ public class GameManager : MonoBehaviour
         else if (playerNum == 1)
         {
             if (ObjSpawnManager.droppedGoodItem)
+            {
                 _rightPlayerScore++;
+                meowAudioSource.Play();
+                player2Anim.SetTrigger("IsSuccess");
+            }
 
             else
+            {
                 _rightPlayerScore--;
+                hissAudioSource.Play();
+            }
+               
 
             rightPlayerScoreText.text = "" + _rightPlayerScore;
 
