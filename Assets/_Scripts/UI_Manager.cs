@@ -10,6 +10,7 @@ public class UI_Manager : MonoBehaviour {
 
     public GameObject MainMenuCanvas;    // The main menu canvas
     public GameObject PauseMenuCanvas;   // The pause menu canvas
+    public GameObject InGameCanvas;      // The in game UI
 
     bool Paused = false;            // Bool to determine if e are paused
     bool inGame = false;            // Determine if e are able to pause    
@@ -41,6 +42,11 @@ public class UI_Manager : MonoBehaviour {
         }
     }
 
+    public void Restart() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 // Main Menu Functions
     public void Start_Game()
     {
@@ -60,6 +66,7 @@ public class UI_Manager : MonoBehaviour {
     public void Resume_Game() 
     {
         Debug.Log("RESUMEDDDD");
+        PauseMenuCanvas.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
     }
 
