@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     //sprites that will be randomly chosen and set to currentSymbol to show which button to press
     public Sprite[] symbols;
     public GameManager gameManager;
-
+    public ObjectPointDrop opj;
     //enum and instance of it to choose target input
     private enum TargetInput { Left, Middle, Right};
     private TargetInput _targetInput;
@@ -44,6 +44,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(0);
+                        opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
@@ -60,6 +61,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(1);
+                        opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
@@ -79,6 +81,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(0);
+                        opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
@@ -95,6 +98,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(1);
+                        opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
@@ -114,6 +118,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(0);
+                        opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
                     }
@@ -130,6 +135,7 @@ public class InputManager : MonoBehaviour
                     {
                         inputActive = false;
                         gameManager.AddPoints(1);
+                        opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
                     }
