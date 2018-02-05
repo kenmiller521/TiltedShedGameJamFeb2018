@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ObjSpawnManager : MonoBehaviour
 {
-
+    public static bool droppedGoodItem;
     public Sprite[] goodItems;
     public Sprite[] badItems;
     public GameObject spawnedObj;
+
     private SpriteRenderer spriteR;
     private Animator anim;
     private int goodbad;
@@ -25,6 +26,7 @@ public class ObjSpawnManager : MonoBehaviour
     {
         if (goodbad <= 1)
         {
+            droppedGoodItem = true;
             switch (randsprite)
             {
                 case 0:
@@ -39,7 +41,9 @@ public class ObjSpawnManager : MonoBehaviour
             }
         }
         else
-            switch(randsprite)
+        {
+            droppedGoodItem = false;
+            switch (randsprite)
             {
                 case 0:
                     spriteR.sprite = badItems[0];
@@ -51,6 +55,7 @@ public class ObjSpawnManager : MonoBehaviour
                     spriteR.sprite = badItems[2];
                     break;
             }
+        }
         StartCoroutine(SpawnDelay());
     }
 

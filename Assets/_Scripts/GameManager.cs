@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     //text to set according to which player won
     public Text playerWinText;
+    public Text leftPlayerScoreText;
+    public Text rightPlayerScoreText;
+
 
     private int _leftPlayerScore;
     private int _rightPlayerScore;
@@ -27,6 +30,8 @@ public class GameManager : MonoBehaviour
 
         spawnedObject.gameObject.SetActive(true);
         inputManager.GetComponent<Animator>().enabled = true;
+
+        
     }
 
     // Update is called once per frame
@@ -43,9 +48,15 @@ public class GameManager : MonoBehaviour
     {
         if (playerNum == 0)
         {
-            _leftPlayerScore++;
+            if(ObjSpawnManager.droppedGoodItem)
+                _leftPlayerScore++;
 
-            if(_leftPlayerScore >= numToWin)
+            else
+                _leftPlayerScore--;
+
+            leftPlayerScoreText.text = "" + _leftPlayerScore;
+
+            if (_leftPlayerScore >= numToWin)
             {
                 gameOver = true;
                 playerWinText.text = "Left Player Wins!";
@@ -58,9 +69,15 @@ public class GameManager : MonoBehaviour
 
         else if (playerNum == 1)
         {
-            _rightPlayerScore++;
+            if (ObjSpawnManager.droppedGoodItem)
+                _rightPlayerScore++;
 
-            if(_rightPlayerScore >= numToWin)
+            else
+                _rightPlayerScore--;
+
+            rightPlayerScoreText.text = "" + _rightPlayerScore;
+
+            if (_rightPlayerScore >= numToWin)
             {
                 gameOver = true;
                 playerWinText.text = "Right Player Wins!";
