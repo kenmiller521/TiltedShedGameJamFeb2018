@@ -5,27 +5,29 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     //bool to reference whether input is monitored
-    public static bool inputActive;
+    public bool inputActive;
     //displays current target input
     public SpriteRenderer currentSymbol;
     //sprites that will be randomly chosen and set to currentSymbol to show which button to press
     public Sprite[] symbols;
     public GameManager gameManager;
+    public GameObject inGameUI;
     public ObjectPointDrop opj;
-
     //enum and instance of it to choose target input
     private enum TargetInput { Left, Middle, Right};
     private TargetInput _targetInput;
 
     private bool _leftPlayerInputActive;
     private bool _rightPlayerInputActive;
-  
+
+    private ButtonController buttonController;
+
 	// Use this for initialization
 	void Start ()
     {
         _leftPlayerInputActive = false;
         _rightPlayerInputActive = false;
-
+        buttonController = inGameUI.GetComponent<ButtonController>();
         inputActive = false;
     }
 
@@ -52,6 +54,8 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C))
                     {
                         _leftPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableLeftPlayerButtons();
                     }
                 }
 
@@ -69,6 +73,8 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
                     {
                         _rightPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableRightPlayerButtons();
                     }
                 }
             }
@@ -89,6 +95,8 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.C))
                     {
                         _leftPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableLeftPlayerButtons();
                     }
                 }
 
@@ -106,6 +114,8 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.M))
                     {
                         _rightPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableRightPlayerButtons();
                     }
                 }
             }
@@ -126,6 +136,8 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X))
                     {
                         _leftPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableLeftPlayerButtons();
                     }
                 }
 
@@ -143,10 +155,11 @@ public class InputManager : MonoBehaviour
                     else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.N))
                     {
                         _rightPlayerInputActive = false;
+                        buttonController.InputActive = false;
+                        DisableRightPlayerButtons();
                     }
                 }
             }
-            
         }
     }
 
@@ -169,6 +182,9 @@ public class InputManager : MonoBehaviour
 
         _leftPlayerInputActive = true;
         _rightPlayerInputActive = true;
+        buttonController.InputActive = true;
+        EnableLeftPlayerButtons();
+        EnableRightPlayerButtons();
         inputActive = true;
     }
 
@@ -180,5 +196,29 @@ public class InputManager : MonoBehaviour
     public void ActivateInput()
     {
         inputActive = true;
+    }
+
+    private void DisableLeftPlayerButtons() {
+        buttonController.zButton.color = Color.gray;
+        buttonController.xButton.color = Color.gray;
+        buttonController.cButton.color = Color.gray;
+    }
+
+    private void DisableRightPlayerButtons() {
+        buttonController.bButton.color = Color.gray;
+        buttonController.nButton.color = Color.gray;
+        buttonController.mButton.color = Color.gray;
+    }
+
+    private void EnableLeftPlayerButtons() {
+        buttonController.zButton.color = Color.white;
+        buttonController.xButton.color = Color.white;
+        buttonController.cButton.color = Color.white;
+    }
+
+    private void EnableRightPlayerButtons() {
+        buttonController.bButton.color = Color.white;
+        buttonController.nButton.color = Color.white;
+        buttonController.mButton.color = Color.white;
     }
 }
