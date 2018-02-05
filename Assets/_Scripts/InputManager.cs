@@ -49,6 +49,7 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
+                        return;
                     }
 
                     else if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C))
@@ -68,6 +69,8 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
+                        return;
+
                     }
 
                     else if (Input.GetKeyDown(KeyCode.N) || Input.GetKeyDown(KeyCode.M))
@@ -90,6 +93,8 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
+                        return;
+
                     }
 
                     else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.C))
@@ -109,6 +114,8 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
+                        return;
+
                     }
 
                     else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.M))
@@ -131,6 +138,8 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(0);
                         currentSymbol.sprite = null;
                         print("LEFT PLAYER WINS");
+                        return;
+
                     }
 
                     else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X))
@@ -150,6 +159,8 @@ public class InputManager : MonoBehaviour
                         opj.SpawnSpriteToSide(1);
                         currentSymbol.sprite = null;
                         print("RIGHT PLAYER WINS");
+                        return;
+
                     }
 
                     else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.N))
