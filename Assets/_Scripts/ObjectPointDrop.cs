@@ -3,15 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPointDrop : MonoBehaviour {
-    private Transform left;
-    private Transform right;
+
+    public GameObject item;
+    public GameObject newPrefab;
+
+    public Transform left;
+    public Transform right;
+
+    private SpriteRenderer spriteR;
+    private SpriteRenderer spriteRNew;
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Awake () {
+        spriteR = item.GetComponent<SpriteRenderer>();
+        spriteRNew = newPrefab.GetComponent<SpriteRenderer>();
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void SpawnSpriteToSide(int playernum)
+    {
+        if (playernum == 0)
+        {
+            newPrefab = Instantiate(newPrefab, left);
+            spriteRNew.sprite = spriteR.sprite;
+        }
+        else
+        {
+            newPrefab = Instantiate(newPrefab, right);
+            spriteRNew.sprite = spriteR.sprite;
+        }
+    }
 }
