@@ -26,7 +26,8 @@ public class UI_Manager : MonoBehaviour {
     
     private void Start()
     {
-        PauseMenuCanvas.gameObject.SetActive(false);
+        if(PauseMenuCanvas != null)
+            PauseMenuCanvas.gameObject.SetActive(false);
         //InGameCanvas.gameObject.SetActive(false);
     }
     
@@ -62,8 +63,8 @@ public class UI_Manager : MonoBehaviour {
     {
         Debug.Log("START NYAOOOOWWWW");
         inGame = true;
-        MainMenuCanvas.gameObject.SetActive(false);
-        //SceneManager.LoadScene("");
+        //MainMenuCanvas.gameObject.SetActive(false);
+        SceneManager.LoadScene("MainScene");
     }
 
     public void Quit_Game () 
