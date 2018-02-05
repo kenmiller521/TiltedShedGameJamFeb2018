@@ -56,8 +56,8 @@ public class ObjSpawnManager : MonoBehaviour
 
     IEnumerator SpawnDelay()
     {
-        goodbad = Random.Range(1, 3);
-        randsprite = Random.Range(1, 3);
+        goodbad = Random.Range(0, 4);
+        randsprite = Random.Range(0, 3);
         yield return new WaitForSeconds(1f);
     }
 }
