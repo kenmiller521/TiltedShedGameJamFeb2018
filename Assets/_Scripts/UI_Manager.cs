@@ -14,14 +14,15 @@ public class UI_Manager : MonoBehaviour {
 
     bool Paused = false;            // Bool to determine if e are paused
     bool inGame = false;            // Determine if e are able to pause    
+    
 
-    // Use this for initialization
     private void Start()
     {
         PauseMenuCanvas.gameObject.SetActive(false);
+        //InGameCanvas.gameObject.SetActive(false);
     }
+    
 
-    // Update is called once per frame
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && inGame)
@@ -41,6 +42,7 @@ public class UI_Manager : MonoBehaviour {
             }
         }
     }
+
 
     public void Restart() 
     {
