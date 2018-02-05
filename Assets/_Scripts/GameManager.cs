@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
 
         spawnedObject.gameObject.SetActive(true);
+        inputManager.GetComponent<Animator>().enabled = true;
     }
 
     // Update is called once per frame
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
                 playerWinText.text = "Left Player Wins!";
                 gameOverPanel.SetActive(true);
                 spawnedObject.gameObject.SetActive(false);
+                inputManager.GetComponent<Animator>().enabled = false;
             }
 
         }
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
                 playerWinText.text = "Right Player Wins!";
                 gameOverPanel.SetActive(true);
                 spawnedObject.gameObject.SetActive(false);
+                inputManager.GetComponent<Animator>().enabled = false;
             }
         }
     }
