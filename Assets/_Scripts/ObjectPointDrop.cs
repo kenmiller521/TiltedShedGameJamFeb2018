@@ -18,15 +18,18 @@ public class ObjectPointDrop : MonoBehaviour {
 	
     public void SpawnSpriteToSide(int playernum)
     {
+        GameObject newItem;
         if (playernum == 0)
         {
-            newPrefab = Instantiate(newPrefab, left);
-            spriteRNew.sprite = spriteR.sprite;
+            newItem = Instantiate(newPrefab, left.position, newPrefab.transform.rotation);
+            newItem.GetComponent<SpriteRenderer>().sprite = spriteR.sprite;
         }
         else
         {
-            newPrefab = Instantiate(newPrefab, right);
-            spriteRNew.sprite = spriteR.sprite;
+            newItem = Instantiate(newPrefab, right.position, newPrefab.transform.rotation);
+            newItem.GetComponent<SpriteRenderer>().sprite = spriteR.sprite;
         }
+
+        newItem.AddComponent<PolygonCollider2D>();
     }
 }

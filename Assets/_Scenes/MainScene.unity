@@ -475,8 +475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSymbol: {fileID: 1134443541}
   symbols:
-  - {fileID: 21300000, guid: 2c959f30710d75542a8dc3b4be1d2f41, type: 3}
   - {fileID: 21300000, guid: af2ea01591e88e54cb16ea9f0efbeac4, type: 3}
+  - {fileID: 21300000, guid: 2c959f30710d75542a8dc3b4be1d2f41, type: 3}
   - {fileID: 21300000, guid: 91b43fab7b58c7248b69043048ce9a22, type: 3}
   gameManager: {fileID: 1659365855}
   opj: {fileID: 1659365852}
@@ -487,7 +487,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381134297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.32, z: 0}
+  m_LocalPosition: {x: 0, y: -1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134443542}
@@ -503,7 +503,7 @@ Animator:
   m_GameObject: {fileID: 381134297}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ea0d1846da47dfc4b9f1489fa500322b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5e61cb522c842524eab8ebe9413d83b9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1764,7 +1764,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1772,7 +1772,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1134443542
 Transform:
@@ -1781,7 +1781,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134443540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.84, z: 0}
+  m_LocalPosition: {x: 0, y: 6.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 381134299}
@@ -2425,7 +2425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1868401660}
-  newPrefab: {fileID: 1357372336565318, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+  newPrefab: {fileID: 1026611111479184, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
   left: {fileID: 1595524471}
   right: {fileID: 1600904913}
 --- !u!114 &1659365853
@@ -2827,6 +2827,48 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ceb69b8f486809948901a5bd9da765e1, type: 3}
   - {fileID: 21300000, guid: 07a8c916423efdb43b94e4869de4cb62, type: 3}
   spawnedObj: {fileID: 1868401660}
+--- !u!1001 &1874866049
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536559613962002, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8ef4ce54c655afb45bfae2deb83674a1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1902280587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +2986,7 @@ MonoBehaviour:
   bButton: {fileID: 1942234364}
   nButton: {fileID: 2110504643}
   mButton: {fileID: 97893710}
+  newColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1942234361
 GameObject:
   m_ObjectHideFlags: 0

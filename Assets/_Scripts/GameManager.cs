@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
     //text to set according to which player won
     public Text playerWinText;
 
-    public float spawnTime;
-
-    private float _spawnTimer;
     private int _leftPlayerScore;
     private int _rightPlayerScore;
 
@@ -28,23 +25,12 @@ public class GameManager : MonoBehaviour
         inputManager.ActivateTarget();
         gameOver = false;
 
-        _spawnTimer = spawnTime;
         spawnedObject.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update ()
     {
-		if(!gameOver)
-        {
-            _spawnTimer -= Time.deltaTime;
-
-            if(_spawnTimer <= 0)
-            {
-                _spawnTimer = spawnTime;
-                inputManager.ActivateTarget();                
-            }
-        }
 	}
 
     public void ActivateTarget()
