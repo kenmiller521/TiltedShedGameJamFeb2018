@@ -11,11 +11,9 @@ public class ObjectPointDrop : MonoBehaviour {
     public Transform right;
 
     private SpriteRenderer spriteR;
-    private SpriteRenderer spriteRNew;
 	// Use this for initialization
 	void Awake () {
         spriteR = item.GetComponent<SpriteRenderer>();
-        spriteRNew = newPrefab.GetComponent<SpriteRenderer>();
     }
 	
     public void SpawnSpriteToSide(int playernum)
