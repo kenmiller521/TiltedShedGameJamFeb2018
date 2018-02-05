@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     //bool to reference whether input is monitored
-    public static bool inputActive;   
+    public static bool inputActive;
     //displays current target input
     public SpriteRenderer currentSymbol;
     //sprites that will be randomly chosen and set to currentSymbol to show which button to press
@@ -23,8 +23,6 @@ public class InputManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        currentSymbol.enabled = false;
-
         _leftPlayerInputActive = false;
         _rightPlayerInputActive = false;
 
