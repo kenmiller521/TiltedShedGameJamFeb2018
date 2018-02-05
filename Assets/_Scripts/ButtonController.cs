@@ -11,33 +11,54 @@ public class ButtonController : MonoBehaviour {
 
     public bool InputActive = true;     // Can we press the buttons?
 
+    public Animator player1Anim;
+    public Animator player2Anim;
+
 	private void Update () {
-		// In Game Buttons
+        // In Game Buttons
+        bool player1Swipe = false;
+        bool player2Swipe = false;
+
         if (InputActive) { 
             if (Input.GetKeyDown(KeyCode.Z)) 
             {
                 Debug.Log("Z");
                 zButton.color = Color.gray;
+                player1Swipe = true;
             } else if (Input.GetKeyDown(KeyCode.X)) 
             {
                 Debug.Log("X");
                 xButton.color = Color.gray;
+                player1Swipe = true;
             } else if (Input.GetKeyDown(KeyCode.C)) 
             { 
                 Debug.Log("C");
                 cButton.color = Color.gray;
+                player1Swipe = true;
             } else if (Input.GetKeyDown(KeyCode.B)) 
             {
                 Debug.Log("B");
                 bButton.color = Color.gray;
+                player2Swipe = true;
             } else if (Input.GetKeyDown(KeyCode.N)) 
             { 
                 Debug.Log("N");
                 nButton.color = Color.gray;
+                player2Swipe = true;
             } else if (Input.GetKeyDown(KeyCode.M)) 
             {
                 Debug.Log("M");
                 mButton.color = Color.gray;
+                player2Swipe = true;
+            }
+
+            if(player1Swipe)
+            {
+                player1Anim.SetTrigger("Swiped");
+            }
+            if(player2Swipe)
+            {
+                player2Anim.SetTrigger("Swiped");
             }
 
             if (Input.GetKeyUp(KeyCode.Z)) 
