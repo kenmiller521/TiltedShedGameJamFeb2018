@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static bool gameOver;
 
     public InputManager inputManager;
+    public ObjSpawnManager spawnedObject;
     public int numToWin;
     //panel to spawn once a player reaches the winning number of toys
     public GameObject gameOverPanel;
@@ -28,12 +29,11 @@ public class GameManager : MonoBehaviour
         gameOver = false;
 
         _spawnTimer = spawnTime;
-
-        inputManager.ActivateTarget();
+        spawnedObject.gameObject.SetActive(true);
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
 		if(!gameOver)
         {
@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
                 gameOver = true;
                 playerWinText.text = "Left Player Wins!";
                 gameOverPanel.SetActive(true);
+                spawnedObject.gameObject.SetActive(false);
             }
 
         }
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
                 gameOver = true;
                 playerWinText.text = "Right Player Wins!";
                 gameOverPanel.SetActive(true);
+                spawnedObject.gameObject.SetActive(false);
             }
         }
     }
