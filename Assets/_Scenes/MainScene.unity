@@ -493,11 +493,11 @@ RectTransform:
   m_Father: {fileID: 1902280591}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 200}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &297106749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 7f268bd93647b7e4e8d79f5454b08614, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -784,6 +784,11 @@ Prefab:
       propertyPath: m_Name
       value: Player2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 95285557437454858, guid: 9019cae65a9e9be4cab6ee450cb8935d,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6753f5ce4e26348838c42a2595c94c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9019cae65a9e9be4cab6ee450cb8935d, type: 2}
   m_IsPrefabParent: 0
@@ -1137,6 +1142,11 @@ Prefab:
       propertyPath: m_Name
       value: Player1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 95905980537679734, guid: 2fc078fdf4e8e304f92770a027279326,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: af7709e9ddc65ab4a8447981713a94a8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fc078fdf4e8e304f92770a027279326, type: 2}
   m_IsPrefabParent: 0
@@ -1345,7 +1355,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7f92773c33f6ea64caba5f26540d1167, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2029,8 +2039,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168518651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.20899996, z: -8}
-  m_LocalScale: {x: 1.44, y: 1.27, z: 1}
+  m_LocalPosition: {x: 0.03, y: -0.2405, z: -8}
+  m_LocalScale: {x: 1.6529348, y: 1.4430093, z: 1}
   m_Children: []
   m_Father: {fileID: 1798202558}
   m_RootOrder: 0
@@ -2391,8 +2401,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535854760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.03, z: 3}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 2.286, z: 3}
+  m_LocalScale: {x: 1.5, y: 1.6038991, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -3077,11 +3087,11 @@ RectTransform:
   m_Father: {fileID: 1902280591}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 200}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1734954646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3102,7 +3112,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 7f268bd93647b7e4e8d79f5454b08614, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -3238,8 +3248,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819330743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -0.20899996, z: -8}
-  m_LocalScale: {x: 1.44, y: 1.27, z: 1}
+  m_LocalPosition: {x: 0.0423, y: -0.2378, z: -8}
+  m_LocalScale: {x: 1.6477658, y: 1.3770497, z: 1}
   m_Children: []
   m_Father: {fileID: 1832709939}
   m_RootOrder: 0
