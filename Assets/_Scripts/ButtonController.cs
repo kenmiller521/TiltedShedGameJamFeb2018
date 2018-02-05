@@ -54,11 +54,26 @@ public class ButtonController : MonoBehaviour {
 
             if(player1Swipe)
             {
-                player1Anim.SetTrigger("Swiped");
+                if(ObjSpawnManager.droppedGoodItem)
+                {
+                    player1Anim.SetTrigger("Swiped");
+                }
+                else
+                {
+                    Debug.Log("Bad");
+                    player1Anim.SetTrigger("Failed Swipe");
+                }
             }
             if(player2Swipe)
             {
-                player2Anim.SetTrigger("Swiped");
+                if(ObjSpawnManager.droppedGoodItem)
+                {
+                    player2Anim.SetTrigger("Swiped");
+                }
+                else
+                {
+                    player2Anim.SetTrigger("Failed Swipe");
+                }
             }
 
             if (Input.GetKeyUp(KeyCode.Z)) 
