@@ -18,7 +18,7 @@ public class ObjectPointDrop : MonoBehaviour {
         spriteRNew = newPrefab.GetComponent<SpriteRenderer>();
     }
 	
-    void SpawnSpriteToSide(int playernum)
+    public void SpawnSpriteToSide(int playernum)
     {
         if (playernum == 0)
         {
