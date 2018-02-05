@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95914345673629290}
   - component: {fileID: 114969976334087192}
   - component: {fileID: 114275143746530198}
+  - component: {fileID: 114090318014070620}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368755625735250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.5, z: 0}
+  m_LocalPosition: {x: 0, y: 4.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,6 +61,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114090318014070620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368755625735250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82e7df0b01853a4c9f3deeac9b26912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodItems:
+  - {fileID: 21300000, guid: b7bef6a7918303746a2a0f61eca1682f, type: 3}
+  - {fileID: 21300000, guid: 323918830a3c75149af3b392e761d7b9, type: 3}
+  - {fileID: 21300000, guid: 1a15f98fde992224396968ec7765f4cf, type: 3}
+  badItems:
+  - {fileID: 21300000, guid: 44a8bea8a633f2447bbb761b828d25f5, type: 3}
+  - {fileID: 21300000, guid: ceb69b8f486809948901a5bd9da765e1, type: 3}
+  - {fileID: 21300000, guid: 44a8bea8a633f2447bbb761b828d25f5, type: 3}
+  spawnedObj: {fileID: 1368755625735250}
 --- !u!114 &114275143746530198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,7 +138,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7f92773c33f6ea64caba5f26540d1167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7bef6a7918303746a2a0f61eca1682f, type: 3}
   m_Color: {r: 0.16176468, g: 0.6184585, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
