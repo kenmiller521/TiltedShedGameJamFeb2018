@@ -11,11 +11,19 @@ public class UI_Manager : MonoBehaviour {
     public GameObject MainMenuCanvas;    // The main menu canvas
     public GameObject PauseMenuCanvas;   // The pause menu canvas
     public GameObject InGameCanvas;      // The in game UI
+    
+    public bool Paused {
+        get {
+            return paused;
+        }
+        set {
+            paused = value;
+        }
+    }
 
-    bool Paused = false;            // Bool to determine if e are paused
+    bool paused = false;            // Bool to determine if e are paused
     bool inGame = false;            // Determine if e are able to pause    
     
-
     private void Start()
     {
         PauseMenuCanvas.gameObject.SetActive(false);
@@ -25,7 +33,7 @@ public class UI_Manager : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && inGame)
+        if (Input.GetKeyDown(KeyCode.Escape)/* && inGame*/)
         {
             Debug.Log("PAWWWWSSEED");
             if (Paused == true)
