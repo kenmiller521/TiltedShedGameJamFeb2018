@@ -951,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &734127518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 923972630}
   - component: {fileID: 923972629}
   m_Layer: 5
-  m_Name: Button
+  m_Name: CButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1905,7 +1905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1361229476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,6 +2797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054133300}
   - component: {fileID: 2054133299}
+  - component: {fileID: 2054133301}
   m_Layer: 0
   m_Name: GameManagerTest
   m_TagString: Untagged
@@ -2817,7 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenuCanvas: {fileID: 734127517}
   PauseMenuCanvas: {fileID: 1965116193}
-  InGameCanvas: {fileID: 0}
+  InGameCanvas: {fileID: 1361229475}
 --- !u!4 &2054133300
 Transform:
   m_ObjectHideFlags: 0
@@ -2831,3 +2832,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2054133301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054133298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55947b833bb0d164d994f806dd4d45e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zButton: {fileID: 430776695}
+  xButton: {fileID: 2049665976}
+  cButton: {fileID: 923972630}
+  bButton: {fileID: 314848643}
+  nButton: {fileID: 1589549272}
+  mButton: {fileID: 906601611}
+  newColor: {r: 0, g: 0, b: 0, a: 0}

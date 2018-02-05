@@ -19,7 +19,7 @@ public class UI_Manager : MonoBehaviour {
     private void Start()
     {
         PauseMenuCanvas.gameObject.SetActive(false);
-        //InGameCanvas.gameObject.SetActive(false);
+        InGameCanvas.gameObject.SetActive(false);
     }
     
 
@@ -55,12 +55,14 @@ public class UI_Manager : MonoBehaviour {
         Debug.Log("START NYAOOOOWWWW");
         inGame = true;
         MainMenuCanvas.gameObject.SetActive(false);
+        InGameCanvas.gameObject.SetActive(true);
         //SceneManager.LoadScene("");
     }
 
     public void Quit_Game () 
     {
         Debug.Log("NYAAAAANNN QUIT GAME");
+        inGame = false;
         Application.Quit();
     }
 
@@ -76,6 +78,7 @@ public class UI_Manager : MonoBehaviour {
     {
         inGame = false;
         PauseMenuCanvas.gameObject.SetActive(false);
+        InGameCanvas.gameObject.SetActive(false);
         MainMenuCanvas.gameObject.SetActive(true);
     }
 }
