@@ -30,5 +30,6 @@ public class ObjectPointDrop : MonoBehaviour {
             newPrefab = Instantiate(newPrefab, right);
             spriteRNew.sprite = spriteR.sprite;
         }
+        newPrefab.AddComponent<PolygonCollider2D>();
     }
 }
