@@ -8,6 +8,13 @@ public class ButtonController : MonoBehaviour {
     //public KeyCode key;
     public Image zButton, xButton, cButton;
     public Image bButton, nButton, mButton;
+    
+    public Color newColor;
+
+    private void Start() 
+    {
+    
+    }
 
 	private void Update () {
 		// In Game Buttons
