@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     public Sprite[] symbols;
     public GameManager gameManager;
     public ObjectPointDrop opj;
+
     //enum and instance of it to choose target input
     private enum TargetInput { Left, Middle, Right};
     private TargetInput _targetInput;
